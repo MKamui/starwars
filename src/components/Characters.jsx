@@ -42,6 +42,10 @@ const Characters = () => {
   return (
     <div>
       <Navbar/>
+      {charactersPage.length === 0 ? 
+      (<div className='text-center mt-40 text-xl'>
+        <p>Bringing all the characters from the galaxy, this will take a few seconds...</p>
+      </div>) : null}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14'>
         {charactersPage.length > 0 && charactersPage.map((character) => 
         <div className='w-4/5 h-30 flex flex-col m-8 border-2 border-yellow-400 rounded-lg'>
